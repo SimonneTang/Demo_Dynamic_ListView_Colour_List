@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Demo Dynamic ListView Colour List</string>
+    <string name="btnaddcolor">Add New Colour</string>
+    <string name="tvaddcolor">Enter New Colour </string>
+</resources>
