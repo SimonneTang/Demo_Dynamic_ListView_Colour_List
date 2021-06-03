@@ -3,7 +3,9 @@ package sg.edu.rp.c346.id20025732.demodynamiclistviewcolourlist;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -44,6 +46,13 @@ public class MainActivity extends AppCompatActivity {
                 int pos = Integer.parseInt(et.getText().toString());
                 alColors.add(pos,colour);
                 aaColors.notifyDataSetChanged();
+            }
+        });
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String colour = alColors.get(position);
+                Log.d("LV CLICK",colour);
             }
         });
 
